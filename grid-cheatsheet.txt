@@ -1,0 +1,4 @@
+CSS Grid:
+* grid-template -> shorthand for grid-template-rows and grid-template-columns (in order)
+* gap is a shorthand for defining both row-gap and column-gap in one line (in order)
+* grid-area -> shorthand for grid-row-start, grid-column-start, grid-row-end & grid-column-end
