@@ -2,3 +2,7 @@ CSS Grid:
 * grid-template -> shorthand for grid-template-rows and grid-template-columns (in order)
 * gap is a shorthand for defining both row-gap and column-gap in one line (in order)
 * grid-area -> shorthand for grid-row-start, grid-column-start, grid-row-end & grid-column-end
+* grid-template-areas  -> property allows you to name sections of your web page to use as values in the grid-row-start, grid-row-end, grid-column-start, grid-column-end (this property is declared on grid containers). To use this property we need to assign grid items grid-area 
+* grid-auto-rows -> specifies the height of implicitly added grid rows
+* grid-auto-columns -> specifies the width of implicitly added grid columns
+* grid-auto-flow -> specifies whether new elements should be added to rows or columns
