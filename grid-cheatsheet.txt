@@ -1,3 +1,5 @@
+CSS cheatsheet:
+
 CSS Grid:
 * grid-template -> shorthand for grid-template-rows and grid-template-columns (in order)
 * gap is a shorthand for defining both row-gap and column-gap in one line (in order)
@@ -6,3 +8,60 @@ CSS Grid:
 * grid-auto-rows -> specifies the height of implicitly added grid rows
 * grid-auto-columns -> specifies the width of implicitly added grid columns
 * grid-auto-flow -> specifies whether new elements should be added to rows or columns
+
+
+CSS Transition: 
+- To create simple transition in CSS, we must specify two of the four aspects:
+    * The property that we want to transition (transition-property)
+    * The duration of the transition (transition-duration)
+    * Pace of the transition (transition-timing-function)
+    * The time to wait before starting the transition (transition-delay)
+* Shorthand for above four transition aspects: transition. The properties must be specified in this order: transition-property, transition-duration, transition-timing-function, transition-delay
+
+	transition-timing-function values: 
+    - ease-in - starts slow, accelerates quickly, stops abruptly
+    - ease-out -> begins abruptly, slows down, and ends slowly
+    - ease-in-out -> starts slow, gets fast in the middle, and ends slowly
+    - linear -> constant speed throughout
+
+CSS Sizing elements (responsive):
+* em -> represents the font-size of the current element or the default base font-size set by the browser if none is given
+* rem(root em) -> similar to em, but instead of checking parent elements font-size, it checks for the root element. The root element is <html> tag
+* To size non-text HTML elements relative to their parent elements on the page use percentages. Percentages are commonly used to size box-model features like, the width, height, padding and margin. (When the %’s used, elements are sized relative to the dimensions of their parent element)
+* (Padding & margin with %) -> when percentages are used to set padding and margin they are calculated based only the width of the parent element
+* min-width -> ensures a minimum width for an element
+* max-width -> ensures a maximum width for an element
+* min-height -> ensures a minimum height for an element’s box
+* max-height -> ensures a maximum height for an element’s box
+* A background image of an HTML element will scale proportionally when it’s background-size is set to cover.
+
+NOTE!!!: When using relative sizing, ems and rems should be used to size text and dimensions on the page related to text size. Otherwise, percentages should be used.
+
+
+CSS Media queries
+* Adding the viewport <meta> tag to our code allows us to control the width and scaling of the viewport so that it’s sized and scaled correctly on all devices.
+* Media queries require media features. Media features are the conditions that must be met to render the CSS within a media query
+* Media features can detect many aspects of a user’s browser, including the screen’s width, height, resolution, orientation and more.
+* The and operator requires multiple media features to be true at once.
+* A comma separated list of media features only requires one media feature to be true for the code within to be applied. 
+* The best practice for identifying where media queries should be set is by resizing the browser to determine where the content naturally breaks.
+
+CSS Functions
+- Functions are a type of CSS value that is inserted in the place of a hardcoded value of a CSS declaration. Some functions can even take multiple arguments, generally each of which must be separated by a comma.
+- The calc() function can be used to perform mathematical operations on a mix of units(rem, vw, px etc). calc() function requires whitespace between the operator and the number in the expression.
+- min() function will select the smallest value from a range of values and set that as the associated property’s value (min(500px, 50vw))
+- max() function will select largest value from a range of values, which will be used as the associated property’s value (max(500px, 50vw)).
+- clamp() function enables a specified value to be kept within an upper and lower bound. clamp(12px, 1.5vw, 48px). 1st argument specifies the min value, 2nd argument specifies preferred value and 3rd argument specifies the max value
+-	The drop-shadow(), blur(), and brightness() functions each perform different kinds of element filtering.
+- The scale(), rotate() and translate() functions each allow for specific kinds of transformation.
+
+Browser compatibility:
+- browserdefaultstyles.com to compare default styles across browsers.
+- normalize.css & minireset.css to eliminate differences between browser default styles and ensure that all elements are rendered the same way across browsers.
+- Vendor Prefixes —> are prefixes for property names that were developed as a way of testing new CSS features before browsers fully supported them.
+    * -webkit- for Chrome, Safari, newer versions of Opera, and almost all iOS browsers, including Firefox for iOS.
+    * -moz- for Firefox
+    * -ms- for Internet Explorer and Microsoft Edge 
+    * -o- for old versions of Opera
+- Polyfills provide a way to support newer web features on older browsers. These codes rewrite the HTML and CSS codes to simulate features that have not yet been adopted by that version of the browser.
+- caniuse.com —> can check whether a CSS feature is available on specific browsers
